@@ -10,8 +10,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET calendar page. */
-router.get('/calendar', (req, res) => {
-  timeSetDate.find({},(err, Mtime) => {
+router.get('/calendar', async (req, res) => {
+  await timeSetDate.find({},(err, Mtime) => {
     if(err) throw err;
 
     let itemCount = Mtime.length;
@@ -44,8 +44,8 @@ function addDays(date, days) {
 }
 
 /* GET community page. */
-router.get('/commu', (req, res) => {
-  postModel.find({},(err, docs) => { 
+router.get('/commu', async (req, res) => {
+  await postModel.find({},(err, docs) => { 
     if(err) throw err;
     let itemCount = docs.length;
 

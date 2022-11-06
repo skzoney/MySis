@@ -15,8 +15,8 @@ router.post('/commu', async (req, res) => {
             postTopic,
             postMessage,
         });
-        // await newPost.save();
-        newPost.save();            
+        await newPost.save();
+        // newPost.save();            
         res.redirect('/commu');               
     } 
     else {        
@@ -36,8 +36,8 @@ router.post('/calendar', async (req, res) => {
             userName,
             dateSet,
         });
-        // await newTimeSet.save();
-        newTimeSet.save();
+        await newTimeSet.save();
+        // newTimeSet.save();
         res.redirect('/calendar')
     }
     else {        
