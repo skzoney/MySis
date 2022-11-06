@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;  
+  font-family: "Quicksand", sans-serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container-fluid {
+    width: 50rem;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.menu h1 {
+    margin-left: 1vh;    
+    font-size: 1.2rem;
+    float: left;
+}
+  
+.menu input {    
+    font-size: 1.1rem;
+    float: right;  
+    color: rgb(153, 8, 97);    
+}
+
+#content {
+    width: 45rem; 
+    height: 67rem;
+    margin-top: 10vh;
+    border-radius: 1vh;    
+    box-shadow: 2px 2px #6B728E;
+    margin: 0 auto;       
+    background-color: #FCEEF5;
+    overflow: auto;
+}
+
+.form-container1 {    
+    width: 39rem;
+    height: 12.3rem;
+    font-size: 0.9rem;        
+    border-radius: 1vh;
+    box-shadow: 2px 2px #6B728E;    
+    margin: 0 auto;
+    margin-top: 1.5vh;
+    background-color: #F9C5D5;    
+}
+
+.form-container1 p {    
+    margin-left: 2vh;           
+}
+
+.form-group-reply {
+    width: 37rem;
+    margin: 0 auto;
+    display: flex;
+    
+}
+.form-group-reply button {
+    width: 3rem;
+    height: 1.5rem;
+    font-size: 0.6rem;
+    text-align: center;
+    display: flex;
+    float: right;
+    margin-top: 1vh;
+    margin-left: 0.4vh;   
+}
+
+.form-container1-2 {    
+    width: 39rem;
+    height: 10rem;    
+    border-radius: 1vh;
+    box-shadow: 2px 2px #6B728E;        
+    margin: 0 auto;
+    background-color: rgb(251, 242, 252);
+}
+
+.form-container1-2 p {    
+    margin-left: 2vh;       
+}
+
+#comment {    
+    width: 45rem; 
+    height: 18rem;            
+    margin: 0 auto;           
+}
+
+.form-container2 {
+    width: 33rem;
+    height: 17rem;    
+    border-radius: 1vh;
+    box-shadow: 2px 2px #6B728E;        
+    margin-top: 1vh; 
+    background-color: rgb(202, 157, 207);    
+}
+
+.form-container2 h3 {       
+    margin-left: 1vh;    
+}
+
+.form-container2 input {
+    width: 10rem;    
+    margin-left: 1vh;    
+}
+
+.form-container2 label {
+    width: 10rem;
+    margin-left: 1vh;
+}
+
+.form-container2 button {
+    width: 5rem;
+    margin-left: 1vh;
+}

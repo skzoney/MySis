@@ -1,0 +1,45 @@
+extends layout2
+
+block content    
+  input(type="hidden" id="nextDayattribute" value=nextDay)
+  form(class="form-calendar" method="POST" action="/auth/calendar")
+    .container-fluid
+      header  
+        .menu
+          h1 MySis Calendar      
+          input(type="button" class="btn btn-link" onclick="location.href='/contact'" value="Contact Us")      
+          input(type="button" class="btn btn-link" onclick="location.href='/commu'" value="Community")
+          input(type="button" class="btn btn-link" onclick="location.href='/calendar'" value="Calendar")
+          input(type="button" class="btn btn-link" onclick="location.href='/'" value="Home")      
+      div(class="clearfix")
+      section(id="content" name="content")       
+        .calendar       
+          .month          
+            i.fas.fa-angle-left.prev
+            .date
+              h1 October
+              p Tue Oct 25, 2022              
+              p2 วันต่อไปของรอบเดือนของคุณ #{`${dateinForm}`}              
+            i.fas.fa-angle-right.next                
+          .weekdays
+            div Sun
+            div Mon
+            div Tue
+            div Wed
+            div Thu
+            div Fri
+            div Sat
+          .days
+      
+      section(id="setTimeInterval" name="setTimeInterval")
+        h1 input your information
+
+        label(for="userName" class="sr-only") Your last date of menstrual
+        input(type="text" id="userName" name="userName" reqiured)
+
+        label(for="dateSet" class="sr-only") Your last start date of menstrual
+        input(type="date" id="dateSet" name="dateSet" reqiured)
+        button(class="btn btn-primary btn-block" type="submit") Submit
+        button(class="btn btn-primary btn-block" id="clear") Clear                   
+
+      script(src="./javascripts/calendar.js")

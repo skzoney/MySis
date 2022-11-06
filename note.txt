@@ -1,0 +1,15 @@
+v.0.1
+
+note part
+
+<<<<< index >>>>>>
+have a link to connect another page
+
+<<<<< calendar >>>>>>
+have a calendar to display today date
+
+<<<<< commu >>>>>>
+have a comment section and comment box to save in db
+
+<<<<< contact us >>>>>>
+no detail

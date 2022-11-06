@@ -1,0 +1,21 @@
+extends layout4
+
+block content
+  form(class="form-contact" method="POST" action="/auth/contact")  
+    .container-fluid  
+      header  
+        .menu
+          h1 MySis Contact Us
+          input(type="button" class="btn btn-link" onclick="location.href='/contact'" value="Contact Us")
+          input(type="button" class="btn btn-link" onclick="location.href='/commu'" value="Community")
+          input(type="button" class="btn btn-link" onclick="location.href='/calendar'" value="Calendar")
+          input(type="button" class="btn btn-link" onclick="location.href='/'" value="Home")
+      div(class="clearfix")
+      .information
+        .from-group
+          h1 MySis
+          p ติดจ่อสอบถามข้อมูล
+          p หรือ
+          p ขอคำปรึกษาและพูดคุยกับ Mysis ได้ที่นี่
+          br 
+          img(src="https://sv1.picz.in.th/images/2022/11/07/vulPPn.png" width="290" height="290")

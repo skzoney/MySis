@@ -1,0 +1,49 @@
+extends layout3.pug 
+
+block content
+  .container-fluid
+    header
+      .menu
+        h1 MySis Community
+        input(type="button" class="btn btn-link" onclick="location.href='/contact'" value="Contact Us")
+        input(type="button" class="btn btn-link" onclick="location.href='/commu'" value="Community")
+        input(type="button" class="btn btn-link" onclick="location.href='/calendar'" value="Calendar")
+        input(type="button" class="btn btn-link" onclick="location.href='/'" value="Home")
+    div(class="clearfix")
+    h2 Show Post           
+    section(id="content" name="content")
+        div(id="comment-box")                                                                           
+          if docs
+          - for(var x=0;x<countItem;x++)
+              .form-container1
+                p Name: #{`${docs[x].postName}`}
+                p Topic: #{`${docs[x].postTopic}`}
+                p #{`${docs[x].postTime}`}
+                p Message: #{`${docs[x].postMessage}`}
+                .form-group-reply
+                  label(for="postReply" class="sr-only") Comment
+                  input(type="text" id="postReply" name="postReply" class="form-control" placeholder="reply comment...")
+                  button(class="btn btn-secondary btn-sm btn-primary" id="reply" type="submit") Reply  
+
+    section(id="comment" name="comment") 
+      .form-container2
+        form(class="form-commu" method="POST" action="/auth/commu")          
+          h3 Comment
+          
+          .form-group
+            label(for="postName" class="sr-only") Name
+            input(type="text" id="postName" name="postName" class="form-control" placeholder="Name" reqiured)  
+          
+          .form-group
+            label(for="postTopic" class="sr-only") Topic
+            input(type="text" id="postTopic" name="postTopic" class="form-control" placeholder="Topic" reqiured)  
+    
+          .form-group
+            label(for="postMessage") Message
+            br
+            input(type='textarea' id="postMessage" name="postMessage" maxlength="256" style="width: 30rem" placeholder="Write your comment here..." reqiured) 
+
+          button(class="btn btn-primary btn-block" type="submit") Post
+          
+          if message 
+            p.alert.alert-danger #{message}          
