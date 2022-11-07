@@ -65,7 +65,7 @@ router.get('/contact', (req, res) => {
 
 module.exports = router;
 
-let port = process.env.MONGODB_URI;
+let port = process.env.PORT;
 if(port == null || port ==""){
   port = 3000;
 }
