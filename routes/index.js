@@ -10,8 +10,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET calendar page. */
-router.get('/calendar', async (req, res) => {
-  await timeSetDate.find({},(err, Mtime) => {
+router.get('/calendar', (req, res) => {
+  timeSetDate.find({},(err, Mtime) => {
     if(err) throw err;
 
     let itemCount = Mtime.length;
@@ -35,6 +35,7 @@ router.get('/calendar', async (req, res) => {
     console.log(Mtime);
     console.log('Next Day: '+nextDay);           
   });  
+  // res.render('calendar');
 });
 
 function addDays(date, days) {
@@ -44,8 +45,8 @@ function addDays(date, days) {
 }
 
 /* GET community page. */
-router.get('/commu', async (req, res) => {
-  await postModel.find({},(err, docs) => { 
+router.get('/commu', (req, res) => {
+  postModel.find({},(err, docs) => { 
     if(err) throw err;
     let itemCount = docs.length;
 
@@ -56,6 +57,7 @@ router.get('/commu', async (req, res) => {
     res.render('commu',{docs, countItem: itemCount});     
     console.log(docs);  
   });
+  // res.render('commu');
 });
 
 /* GET contact page. */
