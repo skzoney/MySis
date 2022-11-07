@@ -64,12 +64,3 @@ router.get('/contact', (req, res) => {
 });
 
 module.exports = router;
-
-let port = process.env.PORT;
-if(port == null || port ==""){
-  port = 3000;
-}
-
-app.listen(port, () => {
-  console.log('App listen on port: 3000');
-})
