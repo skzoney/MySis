@@ -64,3 +64,12 @@ router.get('/contact', (req, res) => {
 });
 
 module.exports = router;
+
+let port = process.env.MONGODB_URI;
+if(port == null || port ==""){
+  port = 3000;
+}
+
+app.listen(port, () => {
+  console.log('App listen on port: 3000');
+})
