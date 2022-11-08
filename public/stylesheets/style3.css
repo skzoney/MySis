@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;  
-  font-family: "Quicksand", sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .clearfix {
@@ -9,7 +9,7 @@
 }
 
 .container-fluid {
-    width: 50rem;
+    width: 57rem;
     margin: 0 auto;
     overflow: hidden;
 }

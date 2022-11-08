@@ -14,11 +14,11 @@ block content
     section(id="content" name="content")
         div(id="comment-box")                                                                           
           if docs
-          - for(var x=0;x<countItem;x++)
+          - for(var x=0;x<countItem;x++)              
               .form-container1
                 p Name: #{`${docs[x].postName}`}
                 p Topic: #{`${docs[x].postTopic}`}
-                p #{`${docs[x].postTime}`}
+                p #{`Post time: ${newDocs[x].postTime}`}
                 p Message: #{`${docs[x].postMessage}`}
                 .form-group-reply
                   label(for="postReply" class="sr-only") Comment

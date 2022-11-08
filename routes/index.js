@@ -54,7 +54,15 @@ router.get('/commu', (req, res) => {
       return new Date(b.postTime) - new Date(a.postTime);
     });
 
-    res.render('commu',{docs, countItem: itemCount});     
+    let newDocs = [];
+    docs.forEach((e) => {
+      const newE = {...e, postTime: e._doc.postTime.toLocaleDateString("en-US")};
+      newDocs.push(newE);
+    });
+    console.log("Check New Docs");
+    console.log(newDocs);
+
+    res.render('commu',{docs, countItem: itemCount, newDocs});     
     console.log(docs);  
   });
   // res.render('commu');
